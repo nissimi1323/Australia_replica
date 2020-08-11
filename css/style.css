@@ -102,15 +102,70 @@ ul {
 
 .main-frame-container {
   background-color: var(--main-frame-color);
-  height: 250rem;
-  width: 90vw;
-  /*remove witdh after inserting content*/
+  /*remove witdh and height after inserting content*/
+  /* height: 250rem; */
+  /* width: 90vw; */
   border-radius: .5rem;
-  margin: 0 auto;
-  /* padding-top: 4.5rem; */
+  margin: 0 4.5rem;
+  padding: 4.5rem 2rem;
   z-index: 2;
   position: relative;
   transform: translateY(-50px);
+}
+
+.article-1 {
+  grid-column: 3 / span 2;
+  grid-row: 2 / span 1;
+}
+
+.article-2 {
+  grid-column: 4 / span 1;
+  grid-row: 4 / span 1;
+}
+
+.pics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 1.5vw;
+}
+
+.pics__item--1 {
+  grid-column: 1 / span 4;
+  grid-row: 5 / span 1;
+}
+
+.pics__item--2 {
+  grid-column: 1 /span 2;
+  grid-row: 2 /span 2;
+}
+
+.pics__item--3 {
+  grid-column: 1 / span 3;
+  grid-row: 4 / span 1;
+}
+
+.pics__item--4 {
+  grid-column: 4 / span 1;
+  grid-row: 1 / span 1;
+}
+
+.pics__item--5 {
+  grid-column: 1 / span 3;
+  grid-row: 1 / span 1;
+}
+
+.pics__item--6 {
+  grid-column: 3 / span 2;
+  grid-row: 3 / span 1;
+}
+
+/* make the pic stay in the box no matter size */
+
+.pics img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .secondary-frame {
